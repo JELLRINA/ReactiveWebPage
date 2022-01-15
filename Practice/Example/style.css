@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 * {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 /* #wrap {
     width: 960px;
@@ -12,10 +12,29 @@
     border: 4px solid #000;
 } */
 
-#wrap {
+/* index2 */
+/* #wrap {
     width: 90%;
     height: 500px;
     margin: 0 auto;
     background: #c45de6;
     border: 4px solid #000;
-}
+} */
+
+/* index3 */
+@media all and (min-width:320px) {
+    body{
+      background: #e65d5d;
+    }
+  }
+  @media all and (min-width:768px) {
+    body{
+      background: #2dcc70;
+    }
+  }
+  @media all and (min-width:960px) {
+    body{
+      background: #6fc0d1;
+    }
+  }
+
