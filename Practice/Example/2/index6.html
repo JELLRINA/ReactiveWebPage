@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>font</title>
+<style>
+    /* 전체 설정 */
+    *{margin:0; padding:0; font-size:100%;}
+
+    #para {
+        font-size: 6em;
+    }
+    #para p {
+        font-size: 0.6666666666666667em;
+        /* 64px / 96px(1em=16px) */
+        /* font-size: 4em; 을 하게 되면 부모 박스(6em)로 인해 글자가 커짐 */
+    }
+    p {
+        font-size: 5em;
+    }
+    p span {
+        font-size: 5rem;
+    }
+    p2 {
+        font-size: 5vw;
+    }
+    p3 {
+        font-size: 5vh;
+    }
+    p4 {
+        font-size: 5vmin;
+    }
+    p5 {
+        font-size: 5vmax;
+    }
+</style>
+</head>
+<body>
+    <div id="para">
+        가변적인 폰트1
+        <p>가변적인 폰트2</p>
+    </div>
+
+    <p>
+        rem 단위1 <br>
+        <span>rem 단위2</span>
+    </p>
+
+    <p2>vw 단위</p2>
+    <br>
+    <p3>vh 단위</p3>
+    <br>
+    <p4>vmin 단위</p4>
+    <br>
+    <p4>vmax 단위</p4>
+    
+
+</body>
+</html>
