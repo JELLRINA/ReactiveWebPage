@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="5" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>structure</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* style application */
+      #wrap {
+        width: 90%;
+        margin: 0 auto;
+        border: 4px solid #000;
+      }
+      #wrap div {
+        display: inline-block;
+        height: 100px;
+      }
+
+      #wrap div:first-child {
+        background: #f45750;
+      }
+      #wrap div:nth-child(2) {
+        background: #40b0f9;
+      }
+      #wrap div:nth-child(3) {
+        background: #40f9a3;
+      }
+      #wrap div:nth-child(4) {
+        background: #f940f0;
+      }
+      #wrap div:last-child {
+        background: #c1f940;
+      }
+
+      /* media application */
+      @media all and (min-width:320px) {
+        #wrap div {
+          width: 100%;
+        }
+      }
+      @media all and (min-width:768px) {
+          /* 브라우저 너비가 768px 일 때 1-4번째 박스까지의 너빗값 */
+        #wrap div {
+          width: 50%;
+        }
+         /* 마지막 박스 너빗값 설정 */
+        #wrap div:last-child {
+        width: 100%;
+      }
+      }
+      
+
+      @media all and (min-width:1024px) {
+          /* 브라우저 너비가 1024px 일 때 1-4번째 박스까지의 너빗값 */
+        #wrap div {
+          width: 20%;
+        }
+        /* 마지막 박스 너빗값 설정 */
+        #wrap div:last-child {
+        width: 20%;
+      }
+      }
+      
+
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div></div><div></div><div></div><div></div><div></div>
+    </div>
+  </body>
+</html>
