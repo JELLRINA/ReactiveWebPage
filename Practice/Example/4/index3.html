@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="5" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>Placement direction2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* 1 주축 방향 */
+      #wrap {
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+        /* flex-start, flex-end, center, space-between, space-around */
+        height: 500px;
+        margin: 50px auto;
+        border: 4px solid #000;
+      }
+
+      #wrap div {
+        width: 20%;
+      }
+      #wrap div:first-child {
+        background: #a1ac9e;
+      }
+      #wrap div:nth-child(2) {
+        background: #e3bd5d;
+      }
+      #wrap div:nth-child(3) {
+        background: #ccc1c5;
+      }
+
+      /* 2 교차축 방향*/
+      #wrap2 {
+        display: flex;
+        width: 90%;
+        align-items: center;
+        /* stretch(default), flex-start, flex-end, center, baseline */
+        height: 500px;
+        margin: 50px auto;
+        border: 4px solid #000;
+      }
+
+      #wrap2 div {
+        /* 너비 등분 */
+        width: 33.33%;
+        height: 200px;
+      }
+      #wrap2 div:first-child {
+        background: #a1ac9e;
+      }
+      #wrap2 div:nth-child(2) {
+        background: #e3bd5d;
+      }
+      #wrap2 div:nth-child(3) {
+        background: #ccc1c5;
+      }
+
+      /* 3 교차축 방향 개별적 배치*/
+      #wrap3 {
+        display: flex;
+        width: 90%;
+        height: 500px;
+        margin: 50px auto;
+        border: 4px solid #000;
+      }
+
+      #wrap3 div {
+        /* 너비 등분 */
+        width: 33.33%;
+        height: 200px;
+      }
+      #wrap3 div:first-child {
+        /* 첫 번째만 끝지점 */
+        align-self: flex-end;
+        /* auto, stretch, flex-start, flex-end, center, baseline */
+        background: #a1ac9e;
+      }
+      #wrap3 div:nth-child(2) {
+        background: #e3bd5d;
+      }
+      #wrap3 div:nth-child(3) {
+        background: #ccc1c5;
+      }
+
+      /* 4 여러줄 교차축 방향*/
+      #wrap4 {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
+        /* strecth(default), flex-start, flex-end, center, space-between, space-around */
+        width: 90%;
+        height: 500px;
+        margin: 50px auto;
+        border: 4px solid #000;
+      }
+
+      #wrap4 div {
+        width: 100%;
+        height: 100px;
+      }
+      #wrap4 div:first-child {
+        background: #a1ac9e;
+      }
+      #wrap4 div:nth-child(2) {
+        background: #e3bd5d;
+      }
+      #wrap4 div:nth-child(3) {
+        background: #ccc1c5;
+      }
+
+      /* 5 배치 순서 바꾸기 */
+      #wrap5 {
+        display: flex;
+        width: 90%;
+        height: 500px;
+        margin: 50px auto;
+        border: 4px solid #000;
+      }
+
+      #wrap5 div {
+        width: 33.33%;
+      }
+      #wrap5 div:first-child {
+        /* 순서 자리 */
+        order: 3;
+        background: #a1ac9e;
+      }
+      #wrap5 div:nth-child(2) {
+        order: 1;
+        background: #e3bd5d;
+      }
+      #wrap5 div:nth-child(3) {
+        order: 2;
+        background: #ccc1c5;
+      }
+
+      /* 6 크기 늘이고 줄이기 */
+      #wrap6 {
+        display: flex;
+        width: 90%;
+        height: 500px;
+        margin: 50px auto;
+        border: 4px solid #000;
+      }
+      #wrap6 div:first-child {
+        flex:3 2 0;
+        /* [flex-grow][flex-shrink][flex-basis] */
+        background: #a1ac9e;
+      }
+      #wrap6 div:nth-child(2) {
+        flex: 2 1 0;
+        background: #e3bd5d;
+      }
+      #wrap6 div:nth-child(3) {
+        flex:2 2 0;
+        background: #ccc1c5;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1 -->
+    <div id="wrap">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- 2 -->
+    <div id="wrap2">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- 3 -->
+    <div id="wrap3">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- 4 -->
+    <div id="wrap4">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- 5 -->
+    <div id="wrap5">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- 6 -->
+    <div id="wrap6">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+  </body>
+</html>
