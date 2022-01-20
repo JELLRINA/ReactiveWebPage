@@ -1,18 +1,253 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="ko">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="refresh" content="5"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<title>FLAT DESIGN</title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<script src="js/jquery.min.js"></script>
-<style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="5" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>FLAT DESIGN</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="images/favicon/flat-design-touch.png"
+    />
+    <script src="js/jquery.min.js"></script>
+    <style>
+      /* 모바일용 CSS */
+      /* 기본 CSS */
+      #wrap {
+        display: flex;
+        /* 태그속성값 felx */
+        flex-flow: column nowrap;
+        /* 박스 속성 값 세로로 한줄씩 배치 */
+        width: 80%;
+        /* 모바일 및 태블릿 너빗값  */
+        margin: 0 auto;
+        max-width: 1200px;
+        /* 박스 중앙으로 배치, 최대 너빗값 */
+      }
 
-</style>
-</head>
-<body>
+      #wrap section {
+        box-sizing: border-box;
+        /* 선값과 패딩값 = 너비값에 포함 (박스 크기 결정)*/
+      }
 
-</body>
+      /* 1 인포메이션 영역 */
+      .info_section {
+          order: 1;
+          width: 100%;
+          background: #2ecc71;
+          border-bottom: 1px solid #39d67c;
+      }
+
+      .info_list {
+          display: flex;
+      }
+
+      .info_list li {
+          width: 25%;
+          text-align: center;
+      }
+
+      .info_list li a {
+          display: block;
+          padding: 15px 0;
+          padding: 0.938rem 0;
+      }
+
+      /* 태블릿용 CSS */
+      @media all and (min-width: 768px) {
+        /* 기본 CSS */
+        #wrap {
+          flex-flow: row wrap;
+          /* 가로로 여러줄 배치 */
+        }
+      }
+      /* PC용 CSS */
+      @media all and(min-width:960px) {
+        /* 기본 CSS */
+        #wrap {
+          position: relative;
+          /* 인포메이션 영역 기준 결정 위치 */
+          width: 90%;
+          /* PC용 너빗값 */
+        }
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <!-- 1. 인포메이션 영역 구조 작업 -->
+    <div id="wrap">
+      <section class="info_section">
+        <!-- 영역 구분 section 태그 -->
+        <ul class="info_list">
+          <!-- 링크 목록 -->
+          <li>
+            <a href="index.html"
+              ><img src="image/s_images/info_icon_1.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href=""><img src="image/s_images/info_icon_2.png" alt="" /></a>
+          </li>
+          <li>
+            <a href=""><img src="image/s_images/info_icon_3.png" alt="" /></a>
+          </li>
+          <li>
+            <a href=""><img src="image/s_images/info_icon_4.png" alt="" /></a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 2.머릿말 -->
+      <header class="header">
+        <!-- 링크 영역 포함된 로고 영역 -->
+        <h1 class="logo">
+          <a href="index.html">flat<br />design</a>
+        </h1>
+        <!-- 메뉴 영역 nav -->
+        <nav class="nav">
+          <ul class="gnb">
+            <li>
+              <a href="index.html"
+                >홈<span class="sub_menu_toggle_btn"
+                  >하위 메뉴 토글 버튼</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="introduce.html"
+                >소개<span class="sub_menu_toggle_btn"
+                  >하위 메뉴 토글 버튼</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="gallery.html"
+                >갤러리<span class="sub_menu_toggle_btn"
+                  >하위 메뉴 토글 버튼</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="board.html"
+                >게시판<span class="sub_menu_toggle_btn"
+                  >하위 메뉴 토글 버튼</span
+                ></a
+              >
+            </li>
+          </ul>
+        </nav>
+        <!-- 메뉴 토글 버튼 (on/off) -->
+        <span class="menu_toggle_btn">전체 메뉴 토글 버튼</span>
+        <!-- 3 -->
+        <section class="slider_section">
+          <span class="prev_btn">이전 버튼</span
+          ><span class="next_btn">다음 버튼</span>
+        </section>
+
+        <!-- 4 -->
+        <!-- 영역 구분1 -->
+        <section class="latest_post_section">
+            <h2 class="title">최근 글</h2>
+            <!-- 목록 구성1 -->
+            <ul class="latest_post_list">
+                <li><a href="">안녕하세요 홈페이지가 오픈...</a></li>
+                <li><a href="">홈페이지 리뉴얼...</a></li>
+                <li><a href="">flat design은...</a></li>
+                <li><a href="">blog에서 다양한 정보를...</a></li>
+                <li><a href="">저는 누굴까요?...</a></li>
+            </ul>
+        </section>
+        <!-- 영역 구분2 -->
+        <section class="popular_post_section">
+            <h2 class="title">인기 글</h2>
+            <!-- 목록 구성2 -->
+            <ul class="latest_post_list">
+                <li><a href="">안녕하세요 홈페이지가 오픈...</a></li>
+                <li><a href="">홈페이지 리뉴얼...</a></li>
+                <li><a href="">flat design은...</a></li>
+                <li><a href="">blog에서 다양한 정보를...</a></li>
+                <li><a href="">저는 누굴까요?...</a></li>
+        </section>
+        <!-- 5 갤러리 영역 구조 -->
+        <!-- 영역 section 태그 작성 후 클래스 명 입력 -->
+        <section class="gallery_section">
+            <!-- 갤러리 목록 구성 -->
+            <ul class="gallery_list">
+                <li>
+                    <a href="#">
+                        <figure>
+                            <img src="images/p_images/gallery_01.jpg" alt="">
+                                <figacaption>디자인 트렌트 플랫</figacaption>
+                            </img>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <figure>
+                            <img src="images/p_images/gallery_02.jpg" alt="">
+                                <figacaption>원색이 포인트 플랫</figacaption>
+                            </img>
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!-- 6 인기 검색어 영역 구조-->
+        <section class="rankup_section">
+            <!-- 영역 제목 클래스 명 -->
+            <h2 class="title">인기 검색어</h2>
+            <!-- 검색어 순위 목록 구성 -->
+            <ul class="rankup_list">
+                <li><a href="">반응형 웹</a></li>
+                <li><a href="">미디어 쿼리</a></li>
+                <li><a href="">뷰포트</a></li>
+                <li><a href="">CSS 트릭스</a></li>
+                <li><a href="">W3C</a></li>
+                <li><a href="">루크 W</a></li>
+                <li><a href="">CSS 젠 가든</a></li>
+                <li><a href="">클리어 보스</a></li>
+                <li><a href="">XE</a></li>
+                <li><a href="">워드프레스</a></li>
+            </ul>
+        </section>
+
+        <!-- 7 배너 영역 구조-->
+        <section class="banner_section">
+            <!-- 배너1 위-->
+            <div class="banner_box_01"><a href=""><img src="images/s_images/w3c_logo.png" alt=""></a></div>
+            <!-- 배너2 아래-->
+            <div class="banner_box_02">
+                <ul class="banner_list">
+                    <li><a href=""><img src="images/s_images/js_logo.png" alt=""></a></li>
+                    <li><a href=""><img src="images/s_images/html_logo.png" alt=""></a></li>
+                    <li><a href=""><img src="images/s_images/css_logo.png" alt=""></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 8 소셜 네트워크 영역 구조 -->
+        <section class="social_section">
+            <!-- 링크 아이콘 목록 -->
+            <ul class="social_list">
+                <li><a href=""><img src="images/s_images/social_icon_01.png" alt=""></a></li>
+                <li><a href=""><img src="images/s_images/social_icon_02.png" alt=""></a></li>
+                <li><a href=""><img src="images/s_images/social_icon_03.png" alt=""></a></li>
+            </ul>
+        </section>
+
+        <!-- 9 푸터 영역 구조 -->
+        <footer class="footer">
+            <p>copyright&copy; 2022.flat design blog all right reserved.</p>
+        </footer>
+      </header>
+    </div>
+  </body>
 </html>

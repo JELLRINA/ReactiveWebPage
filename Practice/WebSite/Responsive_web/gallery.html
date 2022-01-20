@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="5" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>FLAT DESIGN - 갤러리</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon-precomposed" href="images/favicon/flat-design-touch.png">
+    <script src="js/jquery.min.js"></script>
+    <style>
+        /* 모바일용 CSS */
+        /* 기본 CSS */
+        #wrap {
+          display: flex;
+          /* 태그속성값 felx */
+          flex-flow: column nowrap;
+          /* 박스 속성 값 세로로 한줄씩 배치 */
+          width: 80%;
+          /* 모바일 및 태블릿 너빗값  */
+          margin: 0 auto;
+          max-width: 1200px;
+          /* 박스 중앙으로 배치, 최대 너빗값 */
+        }
+  
+        #wrap section {
+          box-sizing: border-box;
+          /* 선값과 패딩값 = 너비값에 포함 (박스 크기 결정)*/
+        }
+  
+        /* 태블릿용 CSS */
+        @media all and (min-width: 768px) {
+            /* 기본 CSS */
+            #wrap {
+                flex-flow: row wrap;
+                /* 가로로 여러줄 배치 */
+            }
+        }
+        /* PC용 CSS */
+        @media all and(min-width:960px) {
+            /* 기본 CSS */
+            #wrap {
+                position: relative;
+                /* 인포메이션 영역 기준 결정 위치 */
+                width: 90%;
+                /* PC용 너빗값 */
+            }
+        }
+      </style>
+    </head>
+    <body>
+      <div id="wrap"></div>
+    </body>
+  </html>
