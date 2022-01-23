@@ -8,8 +8,14 @@
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
     />
     <title>FLAT DESIGN</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!-- type을 지정해야 문구가 뜸 -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon/favicon.ico"
+      type="images/x-icon"
+    />
     <link
       rel="apple-touch-icon-precomposed"
       href="images/favicon/flat-design-touch.png"
@@ -37,108 +43,109 @@
 
       /* 1 인포메이션 영역 (모바일)*/
       .info_section {
-          order: 1;
-          width: 100%;
-          background: #2ecc71;
-          border-bottom: 1px solid #39d67c;
+        order: 1;
+        width: 100%;
+        background: #2ecc71;
+        border-bottom: 1px solid #39d67c;
       }
 
       .info_list {
-          display: flex;
+        display: flex;
       }
 
       .info_list li {
-          /* 너빗값 중앙으로 정렬 */
-          width: 25%;
-          text-align: center;
+        /* 너빗값 중앙으로 정렬 */
+        width: 25%;
+        text-align: center;
       }
 
       .info_list li a {
-          display: block;
-          /* 위 아래 패딩값 */
-          padding: 15px 0;
-          padding: 0.938rem 0;
+        display: block;
+        /* 위 아래 패딩값 */
+        padding: 15px 0;
+        padding: 0.938rem 0;
       }
 
       /* 2. 헤더 영역 (모바일) */
       .header {
-          display: flex;
-          /* 2번째 배치 */
-          order: 2;
-          /* 세로로 배치 */
-          flex-direction: column;
-          /* 토글버튼 기준 잡기 */
-          position: relative;
-          width: 100%;
+        display: flex;
+        /* 2번째 배치 */
+        order: 2;
+        /* 세로로 배치 */
+        flex-direction: column;
+        /* 토글버튼 기준 잡기 */
+        position: relative;
+        width: 100%;
       }
 
       .logo {
-          /* 가장 상단 배치 */
-          order: 1;
-          /* 위.아래 패딩값 및 로고 영역 글자크기 및 행간 설정 */
-          width: 100%;
-          padding: 30px 0;
-          padding: 1.875rem 0;
-          font-size: 1.188em;
-          font-size: 1.188rem;
-          line-height: 21px;
-          line-height: 1.313rem;
-          /* 글자 정렬 및 대문자, 색상, 그림자 설정 */
-          text-align: center;
-          text-transform: uppercase;
-          background: #2ecc71;
-          text-shadow: 0px 1px 1px #25ab5e;
+        /* 가장 상단 배치 */
+        order: 1;
+        /* 위.아래 패딩값 및 로고 영역 글자크기 및 행간 설정 */
+        width: 100%;
+        padding: 30px 0;
+        padding: 1.875rem 0;
+        font-size: 1.188em;
+        font-size: 1.188rem;
+        line-height: 21px;
+        line-height: 1.313rem;
+        /* 글자 정렬 및 대문자, 색상, 그림자 설정 */
+        text-align: center;
+        text-transform: uppercase;
+        background: #2ecc71;
+        text-shadow: 0px 1px 1px #25ab5e;
       }
 
       .nav {
-          order: 2;
-          width: 100%;
+        order: 2;
+        width: 100%;
       }
 
-      .gnb li{
-          display: flex;
-          background: #2c3e50;
+      .gnb li {
+        display: flex;
+        background: #2c3e50;
       }
-      
+
       .gnb li a {
-          /* 너빗값, 위 아래 패딩값 */
-          width: 80%;
-          padding: 20px 0;
-          padding: 1.250rem 0;
-          /* 모든 글자 크기 설정, 들여쓰기 속성, 글자 굵기, 대문자 설정 */
-          font-size: 0.938em;
-          font-size: .938rem;
-          text-indent: 20px;
-          text-indent: 1.250rem;
-          font-weight: bold;
-          text-transform: uppercase;
+        /* 너빗값, 위 아래 패딩값 */
+        width: 80%;
+        padding: 20px 0;
+        padding: 1.25rem 0;
+        /* 모든 글자 크기 설정, 들여쓰기 속성, 글자 굵기, 대문자 설정 */
+        font-size: 0.938em;
+        font-size: 0.938rem;
+        text-indent: 20px;
+        text-indent: 1.25rem;
+        font-weight: bold;
+        text-transform: uppercase;
       }
       .gnb li span {
-          width: 20%;
-          text-indent: -9999px;
-          background: url(images/s_images/sub_menu_toggle_btn.png) center center no-repeat;
-          /* 커서 */
-          cursor: pointer;
+        width: 20%;
+        text-indent: -9999px;
+        background: url(images/s_images/sub_menu_toggle_btn.png) center center
+          no-repeat;
+        /* 커서 */
+        cursor: pointer;
       }
 
       .menu_toggle_btn {
-          /* 토글 버튼 block ,너빗값과 높잇값 */
-          display: block;
-          width: 30px;
-          width: 1.875rem;
-          height: 30px;
-          height: 1.875rem;
-          /* 위치 설정  및 위쪽과 오른쪽 설정*/
-          position: absolute;
-          top: 10px;
-          top: .625rem;
-          right: 10px;
-          right: .625rem;
-          /* 글자 들여 쓰기 및 토글 버튼 이미지 설정 */
-          text-indent: -9999px;
-          background: url(images/s_images/menu_toggle_btn.png) no-repeat;
-          /* 커서 */
-          cursor: pointer;
+        /* 토글 버튼 block ,너빗값과 높잇값 */
+        display: block;
+        width: 30px;
+        width: 1.875rem;
+        height: 30px;
+        height: 1.875rem;
+        /* 위치 설정  및 위쪽과 오른쪽 설정*/
+        position: absolute;
+        top: 10px;
+        top: 0.625rem;
+        right: 10px;
+        right: 0.625rem;
+        /* 글자 들여 쓰기 및 토글 버튼 이미지 설정 */
+        text-indent: -9999px;
+        background: url(images/s_images/menu_toggle_btn.png) no-repeat;
+        /* 커서 */
+        cursor: pointer;
       }
 
       /* 3. 슬라이더 영역 (모바일) */
@@ -152,7 +159,7 @@
         /* 너빗값 높잇값 */
         width: 100%;
         height: 200px;
-        height: 18.750rem;
+        height: 18.75rem;
         /* 이미지 삽입 */
         background: url(images/p_images/slider_01.jpg) center center no-repeat;
       }
@@ -190,11 +197,12 @@
         background: #a660c2;
         text-shadow: 0px 1px 1px #714185;
       }
-      .latest_post_section, .popular_post_section {
+      .latest_post_section,
+      .popular_post_section {
         /* 위/아래 패딩값*/
         padding: 40px 12.5%;
         /* 오른쪽/왼쪽 패딩값 */
-        padding: 2.500rem 12.5%;
+        padding: 2.5rem 12.5%;
         /* 40px ÷ 320px */
       }
       .title {
@@ -208,19 +216,22 @@
         text-transform: uppercase;
         color: #fff;
       }
-      .latest_post_section li, .popular_post_section li {
+      .latest_post_section li,
+      .popular_post_section li {
         /* 위쪽 마진, 왼쪽 패딩값 */
         margin-top: 15px;
-        margin-top: .938rem;
+        margin-top: 0.938rem;
         padding-left: 14px;
-        padding-left: .875rem;
+        padding-left: 0.875rem;
         /* 글자굵기, 대문자변경 */
         font-weight: bold;
         text-transform: uppercase;
         /* 글 목록 기호 이미지 삽입 */
-        background: url(images/s_images/post_circle_icon.png) left center no-repeat;
+        background: url(images/s_images/post_circle_icon.png) left center
+          no-repeat;
       }
-      .latest_post_section:first-child, .popular_post_section:first-child {
+      .latest_post_section li:first-child,
+      .popular_post_section li:first-child {
         margin-top: 0;
       }
 
@@ -244,17 +255,112 @@
         box-shadow: 0px 1px 1px #c43434;
       }
       /* 갤러리 목록 사이 간격 2번째 이미지 조정 */
-      .gallery_list li:nth-child(2){
+      .gallery_list li:nth-child(2) {
         margin-top: 30px;
         margin-top: 1.875rem;
       }
       .gallery_list li figcaption {
         margin-top: 20px;
-        margin-top: 1.250rem;
+        margin-top: 1.25rem;
         font-size: 1.188em;
         font-size: 1.188rem;
         text-transform: uppercase;
         font-weight: bold;
+      }
+
+      /* 6. 인기 검색어 영역 (모바일) */
+      .rankup_section {
+        order: 7;
+        /* 위/아래 , 왼쪽/오른쪽 패딩값 */
+        padding: 40px 12.5%;
+        padding: 2.5rem 12.5%;
+        /* 40px ÷ 320px */
+        background: #219af7;
+        text-shadow: 0px 1px 1px #1974ba;
+      }
+      .rankup_list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .rankup_list li {
+        width: 47.91666666667%;
+        /* 115px ÷ 240px */
+        margin-top: 15px;
+        margin-top: 0.938rem;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      .rankup_list li:first-child,
+      .rankup_list li:nth-child(2) {
+        margin-top: 0;
+      }
+      .rankup_list li a {
+        display: block;
+        padding: 10px 0;
+        padding: 0.625rem 0;
+        border: 1px solid #fff;
+        border-radius: 5px;
+      }
+
+      /* 7. 배너 영역 (모바일) */
+      .banner_section {
+        order: 8;
+      }
+      .banner_box_01 {
+        background: #e6567a;
+      }
+      .banner_box_01 a {
+        /* 패딩값 글자정렬 */
+        display: block;
+        padding: 30px 0;
+        padding: 1.875rem 0;
+        text-align: center;
+      }
+      .banner_box_02 {
+        background: #c44968;
+      }
+      .banner_list {
+        /* 나란히 */
+        display: flex;
+        /* 사이드 둘 가운데 하나 */
+        justify-content: space-around;
+        padding: 30px 12.5%;
+        padding: 1.875rem 12.5%;
+      }
+
+      /* 8. 소셜 네트워크 영역 (모바일) */
+      .social_scetion {
+        order: 9;
+        padding: 24px 12.5%;
+        padding: 1.5rem 12.5%;
+        /* 40px ÷ 320px */
+        background: #fff;
+      }
+      .social_list {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      /* 9. 푸터 영역 (모바일) */
+      .footer {
+        order: 10;
+        width: 100%;
+        background: #474747;
+      }
+      .footer p {
+        /* 패딩값 및 폰트 사이즈 조정 */
+        padding: 20px;
+        padding: 1.25rem;
+        font-size: 0.813em;
+        font-size: 0.813rem;
+        /* 가운데 정렬 및 대문자 굵기 색상 그림자 */
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 0px 1px 1px #191919;
       }
 
       /* 태블릿용 CSS */
@@ -267,56 +373,56 @@
         /* 1.인포메이션 영역은 모바일과 동일 */
         /* 2 .헤더영역 (태블릿) */
         .header {
-            /* 가로로 배치 */
-            flex-direction: row;
+          /* 가로로 배치 */
+          flex-direction: row;
         }
         .logo {
-            /* 자식 위치 및 위쪽 왼쪽 위칫값 설정 */
-            position: absolute;
-            top: 0;
-            left: 0;
-            /* 요소의 겹치는 순서 설정 */
-            z-index: 10;
-            width: 15.625%;
-            /* 120px/768px */
-            /* 패딩값 없애기 */
-            padding: 0;
+          /* 자식 위치 및 위쪽 왼쪽 위칫값 설정 */
+          position: absolute;
+          top: 0;
+          left: 0;
+          /* 요소의 겹치는 순서 설정 */
+          z-index: 10;
+          width: 15.625%;
+          /* 120px/768px */
+          /* 패딩값 없애기 */
+          padding: 0;
         }
-        .logo a{
-            /* 로고의 링크 영역 , 패딩값 */
-            display: block;
-            padding: 50px 0;
-            padding: 3.125rem 0;
+        .logo a {
+          /* 로고의 링크 영역 , 패딩값 */
+          display: block;
+          padding: 50px 0;
+          padding: 3.125rem 0;
         }
 
         .nav {
-            /* 메뉴 영역 설정 */
-            position: relative;
-            /* 최소 높잇값 설정, 배경 설정 */
-            min-height: 80px;
-            min-height: 5.000rem;
-            background: #2ecc71;
+          /* 메뉴 영역 설정 */
+          position: relative;
+          /* 최소 높잇값 설정, 배경 설정 */
+          min-height: 80px;
+          min-height: 5rem;
+          background: #2ecc71;
         }
 
         .gnb {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            z-index: 20;
-            /* 가변 그리드 공식 */
-            width: 40.1041666666667%;
-            /* 308px/768px */
+          position: absolute;
+          top: 100%;
+          right: 0;
+          z-index: 20;
+          /* 가변 그리드 공식 */
+          width: 40.1041666666667%;
+          /* 308px/768px */
         }
-        .menu_toggle_btn{
-            /* 위쪽 오른쪽 설정 */
-            top: 50%;
-            right: 30px;
-            right: 1.875rem;
-            /* 겹치는 순서 설정 */
-            z-index: 20;
-            /* 토글 버튼 위칫값 */
-            margin-top: -15px;
-            margin-top: -0.938rem;
+        .menu_toggle_btn {
+          /* 위쪽 오른쪽 설정 */
+          top: 50%;
+          right: 30px;
+          right: 1.875rem;
+          /* 겹치는 순서 설정 */
+          z-index: 20;
+          /* 토글 버튼 위칫값 */
+          margin-top: -15px;
+          margin-top: -0.938rem;
         }
 
         /* 3. 슬라이더 영역 (태블릿) */
@@ -339,7 +445,8 @@
         .popular_post_section {
           order: 6;
         }
-        .latest_post_section, .popular_post_section {
+        .latest_post_section,
+        .popular_post_section {
           width: 41.6666666666667%;
           /* 320px ÷ 768px */
           padding-left: 5.208333333333%;
@@ -358,19 +465,92 @@
         }
         /* 가로 배치 된 것을 flex */
         .gallery_list {
-          display: flex
+          display: flex;
         }
         .gallery_list li {
           width: 47.008547008547008547%;
           /* 220px ÷ 468px */
         }
-        .gallery_list li:nth-child(2){
+        .gallery_list li:nth-child(2) {
           margin-left: 5.9829059829059829059829%;
           /* 28px ÷ 468px */
           /* 모바일의 마진값 제거 */
           margin-top: 0;
         }
 
+        /* 6. 인기 검색어 영역 (태블릿) */
+        .rankup_section {
+          order: 4;
+          width: 40.1041666667%;
+          /* 308px ÷ 768px */
+          padding-left: 5.208333333%;
+          padding-right: 5.208333333%;
+          /* 40px ÷ 768px */
+        }
+
+        /* 7.배너 영역 (태블릿) */
+        .banner_section {
+          order: 9;
+          display: flex;
+          flex-direction: column;
+          width: 28.6458333333333%;
+          /* 220px ÷ 768px */
+        }
+        .banner_section div {
+          flex: 1 1 0;
+        }
+        .banner_box_01 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .banner_box_01 a {
+          /* 블록 속성 0 */
+          display: inline;
+          padding: 0;
+        }
+        .banner_box_02 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .banner_list {
+          padding: 0;
+          /* 간격 초기값 */
+          justify-content: flex-start;
+        }
+        .banner_list li:nth-child(2) {
+          margin: 0 14px;
+          margin: 0 0.875rem;
+        }
+
+        /* 8. 소셜 네트워크 영역 (태블릿) */
+        .social_scetion {
+          display: flex;
+          order: 7;
+          justify-content: center;
+          align-items: center;
+          width: 16.6666667%;
+          /* 128px ÷ 768px */
+          padding: 0;
+        }
+        .social_list {
+          /* 아이콘 세로로 배치 */
+          flex-direction: column;
+          /* 주축 기본값 */
+          justify-content: flex-start;
+        }
+        .social_list li:nth-child(2) {
+          /* 간격 */
+          margin: 24px 0;
+          margin: 1.5rem 0;
+        }
+
+        /* 9.푸터 영역 (태블릿) */
+        .footer p {
+          padding: 40px 0;
+          padding: 2.5rem 0;
+        }
       }
       /* PC용 CSS */
       @media all and(min-width:960px) {
@@ -381,8 +561,8 @@
           width: 90%;
           /* PC용 너빗값 */
         }
-         /* 1. 인포메이션 영역 (PC) */
-      .info_section {
+        /* 1. 인포메이션 영역 (PC) */
+        .info_section {
           /* 기본값 0 */
           order: 0;
           /* 절대적 위치 (자식) */
@@ -396,110 +576,177 @@
           /* 너빗값 및 아래쪽 선 0 */
           width: auto;
           border-bottom: 0;
-     }
+        }
 
-     .info_list {
-         width: auto;
-         /* 왼쪽 마진 간격 확보 */
-         margin-left: 15px;
-         margin-left: 0.625rem;
-     }
+        .info_list li {
+          width: auto;
+          /* 왼쪽 마진 간격 확보 */
+          margin-left: 15px;
+          margin-left: 0.625rem;
+        }
 
-     .info_list li {
-         /* 목록 링크 태그 패딩값 0 */
-         padding: 0;
-     }
+        .info_list li a{
+          /* 목록 링크 태그 패딩값 0 */
+          padding: 0;
+        }
 
-     /* 2. 헤더 영역 (PC)*/
-     .header {
-         order: 1;
-         /* 주축 방향 끝점 */
-         justify-content: flex-end;
-         position: static;
-     }
+        /* 2. 헤더 영역 (PC)*/
+        .header {
+          order: 1;
+          /* 주축 방향 끝점 */
+          justify-content: flex-end;
+          position: static;
+        }
 
-     .logo {
-       /* 로고 너빗값 */
-       width: 12.5%;
-       /* 120px / 960px */
-     }
-     .nav {
-       display: flex;
-       /* 메뉴 세로 중앙 */
-       align-items: center;
-       /* 기본값 */
-       position: static;
-       width: 87.5%;
-       /* 840px / 960px */
-     }
-     .gnb {
-       display: flex !important;
-       flex-direction: row;
-       position: static;
-       width: 100%;
-       text-shadow: 0px 1px 1px #25ab5e;
-     }
-     .gnb li {
-        display: block;
-        margin-left: 5.2083333333%;
-        /* 50px / 840px */
-        background: none;
-     }
-     .gnb li a {
-       /* CSS너빗값 초기화 > auto 설정 */
-       width: auto;
-       padding: 0;
-       text-indent: 0;
-     }
-     /* pc용은 필요없는 토글버튼 */
-     .gnb li span {
-       display: none;
-     }
-     .menu_toggle_btn {
-       display: none;
-     }
+        .logo {
+          /* 로고 너빗값 */
+          width: 12.5%;
+          /* 120px / 960px */
+        }
+        .nav {
+          display: flex;
+          /* 메뉴 세로 중앙 */
+          align-items: center;
+          /* 기본값 */
+          position: static;
+          width: 87.5%;
+          /* 840px / 960px */
+        }
+        .gnb {
+          display: flex !important;
+          flex-direction: row;
+          position: static;
+          width: 100%;
+          text-shadow: 0px 1px 1px #25ab5e;
+        }
+        .gnb li {
+          display: block;
+          margin-left: 5.2083333333%;
+          /* 50px / 840px */
+          background: none;
+        }
+        .gnb li a {
+          /* CSS너빗값 초기화 > auto 설정 */
+          width: auto;
+          padding: 0;
+          text-indent: 0;
+        }
+        /* pc용은 필요없는 토글버튼 */
+        .gnb li span {
+          display: none;
+        }
+        .menu_toggle_btn {
+          display: none;
+        }
 
-     /* 3.슬라이더 영역 (PC) */
-     .slider_section {
-       order:2;
-       width: 50%;
-       /* 480px ÷ 960px */
-     }
+        /* 3.슬라이더 영역 (PC) */
+        .slider_section {
+          order: 2;
+          width: 50%;
+          /* 480px ÷ 960px */
+        }
 
-     /* 4. 최근 글, 인기 글 영역 (PC) */
-     .latest_post_section, .popular_post_section {
-       display: flex;
-       /* 세로로 배치 */
-       flex-direction: column;
-       align-items: center;
-       width: 30%;
-       /* 288px ÷ 960px */
-       /* 태블릿에서 적용한 패딩값 제거 */
-       padding-left: 0;
-       padding-right: 0;
-     }
+        /* 4. 최근 글, 인기 글 영역 (PC) */
+        .latest_post_section,
+        .popular_post_section {
+          display: flex;
+          /* 세로로 배치 */
+          flex-direction: column;
+          align-items: center;
+          width: 30%;
+          /* 288px ÷ 960px */
+          /* 태블릿에서 적용한 패딩값 제거 */
+          padding-left: 0;
+          padding-right: 0;
+        }
 
-     /* 5. 갤러리 영역 (PC) */
-     .gallery_section {
-       order: 3;
-       width: 27.083333333%;
-       /* 260px ÷ 960px */
-     }
-     .gallery_list {
-       display: block;
-     }
-     .gallery_list li {
-       width: auto;
-     }
-     .gallery_list li:nth-child(2) {
-       margin-top: 30px;
-       margin-top: 1.875rem;
-       margin-left: 0;
-     }
+        /* 5. 갤러리 영역 (PC) */
+        .gallery_section {
+          order: 3;
+          width: 27.083333333%;
+          /* 260px ÷ 960px */
+        }
+        .gallery_list {
+          display: block;
+        }
+        .gallery_list li {
+          width: auto;
+        }
+        .gallery_list li:nth-child(2) {
+          margin-top: 30px;
+          margin-top: 1.875rem;
+          margin-left: 0;
+        }
 
-    }
+        /* 6. 인기 검색어 영역 (PC) */
+        .rankup_section {
+          display: flex;
+          /* 세로로 배치 */
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 22.9166666667%;
+          /* 220px ÷ 960px */
+          /* 태블릿에서 설정한 패딩값 초기화 */
+          padding: 0;
+        }
+        .rankup_list {
+          display: flex;
+        }
+        .rankup_list li {
+          /* 너빗값 초기화 */
+          width: auto;
+          /* 글자 왼쪽 정렬 */
+          text-align: left;
+          /* 카운터 증가 속성 설정 */
+          counter-increment: rankup-counter;
+        }
+        .rankup_list li:nth-child(2) {
+          margin-top: 15px;
+          margin-top: 0.938rem;
+        }
+        .rankup_list li::before {
+          padding-right: 6px;
+          padding-right: 0.375rem;
+          text-transform: uppercase;
+          /* 글자 굵기 색상 그림자 */
+          font-weight: bold;
+          color: #fff;
+          text-shadow: 0px 1px 1px #428e9e;
+          /* 카운터 숫자 함수 */
+          content: counter(rankup-conter) ;
+        }
+        .rankup_list li a {
+          /* 패딩값 선값 0 */
+          display: inline;
+          padding: 0;
+          border: 0;
+        }
 
-     
+        /* 7. 배너 영역 (PC) */
+        .banner_section {
+          order: 7;
+          width: 22.9166666667%;
+          /* 220px ÷ 960px */
+        }
+
+        /* 8. 소셜 네트워크 영역 (PC) */
+        .social_scetion {
+          order: 8;
+          width: 17.083333333%;
+          /* 164px ÷ 960px */
+        }
+
+        /* 9. 푸터영역 (PC) */
+        .footer {
+          order: 9;
+        }
+        .footer p {
+          padding-left: 3.125%;
+          /* 30px ÷ 960px */
+          text-align: left;
+        }
+      }
     </style>
   </head>
   <body>
@@ -509,20 +756,10 @@
         <!-- 영역 구분 section 태그 -->
         <ul class="info_list">
           <!-- 링크 목록 -->
-          <li>
-            <a href="index.html"
-              ><img src="image/s_images/info_icon_1.png" alt=""
-            /></a>
-          </li>
-          <li>
-            <a href=""><img src="image/s_images/info_icon_2.png" alt="" /></a>
-          </li>
-          <li>
-            <a href=""><img src="image/s_images/info_icon_3.png" alt="" /></a>
-          </li>
-          <li>
-            <a href=""><img src="image/s_images/info_icon_4.png" alt="" /></a>
-          </li>
+          <li><a href="index.html"><img src="images/s_images/info_icon_01.png" alt=""></a></li>
+          <li><a href=""><img src="images/s_images/info_icon_02.png" alt=""></a></li>
+          <li><a href=""><img src="images/s_images/info_icon_03.png" alt=""></a></li>
+          <li><a href=""><img src="images/s_images/info_icon_04.png" alt=""></a></li>
         </ul>
       </section>
 
@@ -535,142 +772,137 @@
         <!-- 메뉴 영역 nav -->
         <nav class="nav">
           <ul class="gnb">
-            <li>
-              <a href="index.html"
-                >홈<span class="sub_menu_toggle_btn"
-                  >하위 메뉴 토글 버튼</span
-                ></a
-              >
-            </li>
-            <li>
-              <a href="introduce.html"
-                >소개<span class="sub_menu_toggle_btn"
-                  >하위 메뉴 토글 버튼</span
-                ></a
-              >
-            </li>
-            <li>
-              <a href="gallery.html"
-                >갤러리<span class="sub_menu_toggle_btn"
-                  >하위 메뉴 토글 버튼</span
-                ></a
-              >
-            </li>
-            <li>
-              <a href="board.html"
-                >게시판<span class="sub_menu_toggle_btn"
-                  >하위 메뉴 토글 버튼</span
-                ></a
-              >
-            </li>
+            <li><a href="index.html">홈</a><span class="sub_menu_toggle_btn">하위 메뉴 토글 버튼</span></li>
+            <li><a href="introudce.html">플랫 디자인이란?</a><span class="sub_menu_toggle_btn">하위 메뉴 토글 버튼</span></li>
+            <li><a href="gallery.html">갤러리</a><span class="sub_menu_toggle_btn">하위 메뉴 토글 버튼</span></li>
+            <li><a href="board.html">문의사항</a><span class="sub_menu_toggle_btn">하위 메뉴 토글 버튼</span></li>
           </ul>
         </nav>
         <!-- 메뉴 토글 버튼 (on/off) -->
         <span class="menu_toggle_btn">전체 메뉴 토글 버튼</span>
-
-        <!-- 3 -->
-        <section class="slider_section">
-          <span class="prev_btn">이전 버튼</span
-          ><span class="next_btn">다음 버튼</span>
-        </section>
-
-        <!-- 4 -->
-        <!-- 영역 구분1 -->
-        <section class="latest_post_section">
-            <h2 class="title">최근 글</h2>
-            <!-- 목록 구성1 -->
-            <ul class="latest_post_list">
-                <li><a href="">안녕하세요 홈페이지가 오픈...</a></li>
-                <li><a href="">홈페이지 리뉴얼...</a></li>
-                <li><a href="">flat design은...</a></li>
-                <li><a href="">blog에서 다양한 정보를...</a></li>
-                <li><a href="">저는 누굴까요?...</a></li>
-            </ul>
-        </section>
-        <!-- 영역 구분2 -->
-        <section class="popular_post_section">
-            <h2 class="title">인기 글</h2>
-            <!-- 목록 구성2 -->
-            <ul class="popular_post_list">
-                <li><a href="">안녕하세요 홈페이지가 오픈...</a></li>
-                <li><a href="">홈페이지 리뉴얼...</a></li>
-                <li><a href="">flat design은...</a></li>
-                <li><a href="">blog에서 다양한 정보를...</a></li>
-                <li><a href="">저는 누굴까요?...</a></li>
-        </section>
-        <!-- 5 갤러리 영역 구조 -->
-        <!-- 영역 section 태그 작성 후 클래스 명 입력 -->
-        <section class="gallery_section">
-            <!-- 갤러리 목록 구성 -->
-            <ul class="gallery_list">
-                <li>
-                    <a href="#">
-                        <figure>
-                            <img src="images/p_images/gallery_01.jpg" alt="">
-                                <figacaption>디자인 트렌트 플랫</figacaption>
-                            </img>
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <figure>
-                            <img src="images/p_images/gallery_02.jpg" alt="">
-                                <figacaption>원색이 포인트 플랫</figacaption>
-                            </img>
-                        </figure>
-                    </a>
-                </li>
-            </ul>
-        </section>
-        <!-- 6 인기 검색어 영역 구조-->
-        <section class="rankup_section">
-            <!-- 영역 제목 클래스 명 -->
-            <h2 class="title">인기 검색어</h2>
-            <!-- 검색어 순위 목록 구성 -->
-            <ul class="rankup_list">
-                <li><a href="">반응형 웹</a></li>
-                <li><a href="">미디어 쿼리</a></li>
-                <li><a href="">뷰포트</a></li>
-                <li><a href="">CSS 트릭스</a></li>
-                <li><a href="">W3C</a></li>
-                <li><a href="">루크 W</a></li>
-                <li><a href="">CSS 젠 가든</a></li>
-                <li><a href="">클리어 보스</a></li>
-                <li><a href="">XE</a></li>
-                <li><a href="">워드프레스</a></li>
-            </ul>
-        </section>
-
-        <!-- 7 배너 영역 구조-->
-        <section class="banner_section">
-            <!-- 배너1 위-->
-            <div class="banner_box_01"><a href=""><img src="images/s_images/w3c_logo.png" alt=""></a></div>
-            <!-- 배너2 아래-->
-            <div class="banner_box_02">
-                <ul class="banner_list">
-                    <li><a href=""><img src="images/s_images/js_logo.png" alt=""></a></li>
-                    <li><a href=""><img src="images/s_images/html_logo.png" alt=""></a></li>
-                    <li><a href=""><img src="images/s_images/css_logo.png" alt=""></a></li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- 8 소셜 네트워크 영역 구조 -->
-        <section class="social_section">
-            <!-- 링크 아이콘 목록 -->
-            <ul class="social_list">
-                <li><a href=""><img src="images/s_images/social_icon_01.png" alt=""></a></li>
-                <li><a href=""><img src="images/s_images/social_icon_02.png" alt=""></a></li>
-                <li><a href=""><img src="images/s_images/social_icon_03.png" alt=""></a></li>
-            </ul>
-        </section>
-
-        <!-- 9 푸터 영역 구조 -->
-        <footer class="footer">
-            <p>copyright&copy; 2022.flat design blog all right reserved.</p>
-        </footer>
       </header>
+
+      <!-- 3 -->
+      <section class="slider_section">
+        <span class="prev_btn">이전 버튼</span
+        ><span class="next_btn">다음 버튼</span>
+      </section>
+
+      <!-- 4 -->
+      <!-- 영역 구분1 -->
+      <section class="latest_post_section">
+        <h2 class="title">최근 글</h2>
+        <!-- 목록 구성1 -->
+        <ul class="latest_post_list">
+          <li><a href="">안녕하세요 홈페이지가 오픈...</a></li>
+          <li><a href="">홈페이지 리뉴얼...</a></li>
+          <li><a href="">flat design은...</a></li>
+          <li><a href="">blog에서 다양한 정보를...</a></li>
+          <li><a href="">저는 누굴까요?...</a></li>
+        </ul>
+      </section>
+      <!-- 영역 구분2 -->
+      <section class="popular_post_section">
+        <h2 class="title">인기 글</h2>
+        <!-- 목록 구성2 -->
+        <ul class="popular_post_list">
+          <li><a href="">안녕하세요 홈페이지가 오픈...</a></li>
+          <li><a href="">홈페이지 리뉴얼...</a></li>
+          <li><a href="">flat design은...</a></li>
+          <li><a href="">blog에서 다양한 정보를...</a></li>
+          <li><a href="">저는 누굴까요?...</a></li>
+        </ul>
+      </section>
+      <!-- 5 갤러리 영역 구조 -->
+      <!-- 영역 section 태그 작성 후 클래스 명 입력 -->
+      <section class="gallery_section">
+        <!-- 갤러리 목록 구성 -->
+        <ul class="gallery_list">
+          <li>
+            <a href="#">
+              <figure>
+                <img src="images/p_images/gallery_01.jpg" alt="" />
+                <figcaption>디자인 트렌트 플랫</figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <figure>
+                <img src="images/p_images/gallery_02.jpg" alt="" />
+                <figcaption>원색이 포인트 플랫</figcaption>
+              </figure>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!-- 6 인기 검색어 영역 구조-->
+      <section class="rankup_section">
+        <!-- 영역 제목 클래스 명 -->
+        <h2 class="title">인기 검색어</h2>
+        <!-- 검색어 순위 목록 구성 -->
+        <ul class="rankup_list">
+          <li><a href="">반응형 웹</a></li>
+          <li><a href="">미디어 쿼리</a></li>
+          <li><a href="">뷰포트</a></li>
+          <li><a href="">CSS 트릭스</a></li>
+          <li><a href="">W3C</a></li>
+          <li><a href="">루크 W</a></li>
+          <li><a href="">CSS 젠 가든</a></li>
+          <li><a href="">클리어 보스</a></li>
+          <li><a href="">XE</a></li>
+          <li><a href="">워드프레스</a></li>
+        </ul>
+      </section>
+
+      <!-- 7 배너 영역 구조-->
+      <section class="banner_section">
+        <!-- 배너1 위-->
+        <div class="banner_box_01">
+          <a href=""><img src="images/s_images/w3c_logo.png" alt="" /></a>
+        </div>
+        <!-- 배너2 아래-->
+        <div class="banner_box_02">
+          <ul class="banner_list">
+            <li>
+              <a href=""><img src="images/s_images/js_logo.png" alt="" /></a>
+            </li>
+            <li>
+              <a href=""><img src="images/s_images/html_logo.png" alt="" /></a>
+            </li>
+            <li>
+              <a href=""><img src="images/s_images/css_logo.png" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 8 소셜 네트워크 영역 구조 -->
+      <section class="social_section">
+        <!-- 링크 아이콘 목록 -->
+        <ul class="social_list">
+          <li>
+            <a href=""
+              ><img src="images/s_images/social_icon_01.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href=""
+              ><img src="images/s_images/social_icon_02.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href=""
+              ><img src="images/s_images/social_icon_03.png" alt=""
+            /></a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 9 푸터 영역 구조 -->
+      <footer class="footer">
+        <p>copyright&copy; 2022.flat design blog all right reserved.</p>
+      </footer>
     </div>
   </body>
 </html>
