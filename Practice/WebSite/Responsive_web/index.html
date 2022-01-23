@@ -243,7 +243,19 @@
         border-radius: 3px;
         box-shadow: 0px 1px 1px #c43434;
       }
-      .gallery_list li:nth-child(2)
+      /* 갤러리 목록 사이 간격 2번째 이미지 조정 */
+      .gallery_list li:nth-child(2){
+        margin-top: 30px;
+        margin-top: 1.875rem;
+      }
+      .gallery_list li figcaption {
+        margin-top: 20px;
+        margin-top: 1.250rem;
+        font-size: 1.188em;
+        font-size: 1.188rem;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
 
       /* 태블릿용 CSS */
       @media all and (min-width: 768px) {
@@ -333,6 +345,30 @@
           padding-left: 5.208333333333%;
           padding-right: 5.208333333333%;
           /* 40px ÷ 768px */
+        }
+
+        /* 5. 갤러리 영역 (태블릿) */
+        .gallery_section {
+          order: 8;
+          width: 71.354166666667%;
+          /* 548px ÷ 768px */
+          padding-left: 5.2083333333%;
+          padding-right: 5.20833333333%;
+          /* 40px ÷ 768px */
+        }
+        /* 가로 배치 된 것을 flex */
+        .gallery_list {
+          display: flex
+        }
+        .gallery_list li {
+          width: 47.008547008547008547%;
+          /* 220px ÷ 468px */
+        }
+        .gallery_list li:nth-child(2){
+          margin-left: 5.9829059829059829059829%;
+          /* 28px ÷ 468px */
+          /* 모바일의 마진값 제거 */
+          margin-top: 0;
         }
 
       }
@@ -442,6 +478,25 @@
        padding-left: 0;
        padding-right: 0;
      }
+
+     /* 5. 갤러리 영역 (PC) */
+     .gallery_section {
+       order: 3;
+       width: 27.083333333%;
+       /* 260px ÷ 960px */
+     }
+     .gallery_list {
+       display: block;
+     }
+     .gallery_list li {
+       width: auto;
+     }
+     .gallery_list li:nth-child(2) {
+       margin-top: 30px;
+       margin-top: 1.875rem;
+       margin-left: 0;
+     }
+
     }
 
      
