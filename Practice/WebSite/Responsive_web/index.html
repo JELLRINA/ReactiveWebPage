@@ -331,7 +331,7 @@
       }
 
       /* 8. 소셜 네트워크 영역 (모바일) */
-      .social_scetion {
+      .social_section {
         order: 9;
         padding: 24px 12.5%;
         padding: 1.5rem 12.5%;
@@ -490,8 +490,8 @@
 
         /* 7.배너 영역 (태블릿) */
         .banner_section {
-          order: 9;
           display: flex;
+          order: 9;
           flex-direction: column;
           width: 28.6458333333333%;
           /* 220px ÷ 768px */
@@ -525,7 +525,7 @@
         }
 
         /* 8. 소셜 네트워크 영역 (태블릿) */
-        .social_scetion {
+        .social_section {
           display: flex;
           order: 7;
           justify-content: center;
@@ -549,11 +549,11 @@
         /* 9.푸터 영역 (태블릿) */
         .footer p {
           padding: 40px 0;
-          padding: 2.5rem 0;
+          padding: 2.500rem 0;
         }
       }
       /* PC용 CSS */
-      @media all and(min-width:960px) {
+      @media all and (min-width:960px) {
         /* 기본 CSS */
         #wrap {
           position: relative;
@@ -691,7 +691,7 @@
           padding: 0;
         }
         .rankup_list {
-          display: flex;
+          display: block;
         }
         .rankup_list li {
           /* 너빗값 초기화 */
@@ -714,7 +714,7 @@
           color: #fff;
           text-shadow: 0px 1px 1px #428e9e;
           /* 카운터 숫자 함수 */
-          content: counter(rankup-conter) ;
+          content: counter(rankup-counter) '.';
         }
         .rankup_list li a {
           /* 패딩값 선값 0 */
