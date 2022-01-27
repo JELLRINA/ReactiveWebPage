@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="style.css">
+<script src="js/jquery.min.js"></script>
+<title>basic web site</title>
+<style>
+/* 모바일용 CSS */
+/* 기본 CSS */
+.container {
+    /* 모든 환경 */
+    width: 90%;
+    max-width: 1132px;
+    margin: 0 auto;
+}
+.cfixed:after, .container:after {
+    display: block;
+    content: "";
+    /* 플롯속성의로 발생 문제 방지 '양쪽 속성 값' */
+    clear: both;
+}
+.blind {
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+/* 태블릿용 CSS */
+@media all and (min-width:768px) {
+
+    
+}
+/* PC용 CSS */
+@media all and (min-width:1132px) {
+    
+}
+
+</style>
+</head>
+<body>
+    <div id="wrap"></div>
+</body>
+</html>
