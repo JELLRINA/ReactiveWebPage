@@ -4,10 +4,11 @@
 <meta charset="UTF-8">
 <meta http-equiv="refresh" content="5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" href="images/favicon/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="images/favicon/indigo-touch-icon.png">
+<link rel="stylesheet" type="text/css" href="style.css">
 <script src="js/jquery.min.js"></script>
-<title>basic web site</title>
+<title>WEB SITE</title>
 <style>
 /* 모바일용 CSS */
 /* 기본 CSS */
@@ -23,6 +24,7 @@
     /* 플롯속성의로 발생 문제 방지 '양쪽 속성 값' */
     clear: both;
 }
+/* 해당 요소 숨기기 */
 .blind {
     position: absolute;
     width: 0;
@@ -31,6 +33,28 @@
     text-indent: -9999px;
     overflow: hidden;
 }
+
+/* 제목 영역 스타일 설정 */
+.sec-tit {
+    font-size: 42px;
+    color: #3f51b5;
+    font-weight: normal;
+}
+/* 프로모션 영역 밑 구분선 스타일 지정 */
+.divider {
+    width: 90%;
+    max-width: 1132px;
+    margin: 0 auto;
+    margin-top: 77px;
+    background: #eee;
+}
+/* 최근 작업 영역 밑 구분선 지정 */
+.m-divider {
+    width: 20px;
+    margin: 0 auto;
+    margin-top: 77px;
+    background: #3f51b5;
+}
 /* 태블릿용 CSS */
 @media all and (min-width:768px) {
 
@@ -38,12 +62,217 @@
 }
 /* PC용 CSS */
 @media all and (min-width:1132px) {
-    
+    .divider {
+        margin-top: 124px;
+    }
+    .m-divider {
+        margin-top: 124px;
+    }
 }
 
 </style>
 </head>
 <body>
-    <div id="wrap"></div>
+    <div id="wrap">
+        <!-- 1. 헤더 영역 -->
+        <header class="header cfixed">
+            <!-- 링크 영역 포함된 로고 영역 제목 -->
+            <h1 class="logo"><a href="">INDIGO</a></h1>
+            <!-- 메뉴 영역 내비 (목록 구성) -->
+            <nav>
+                <ul class="gnb">
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">WE ARE</a></li>
+                    <li><a href="">WORK</a></li>
+                    <li><a href="">BLOG</a></li>
+                    <li><a href="">CONTACT US</a></li>
+                </ul>
+            </nav>
+            <!-- 토글 버튼 태그 -->
+            <span class="menu-toggle-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </header>
+        <!-- 2. 슬라이더 영역 -->
+        <aritcle class="slider">
+            <img src="images/p-images/slide01.jpg" alt=""></aritcle>
+
+        <!-- 3. 디스플레이 영역 -->
+        <section class="content">
+            <section class="display-section">
+                <div class="container">
+                    <h2 class="sec-tit">WE ARE</h2>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Culpa magnam, dolorem provident earum in nemo, ea pariatur saepe recusandae nostrum omnis ducimus velit ad odio dolorum fugiat voluptatum at voluptas?</p>
+                </div>
+            </section>
+            <!-- 4. 프로모션 영역 -->
+            <section class="promotion-section">
+                <div class="container">
+                    <ul class="promo-list">
+                        <li>
+                            <a href="">
+                                <img src="images/s-images/promo01.png" alt="">
+                                    <h3>HOME</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quam facere reprehenderit!</p>
+                                </img>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="images/s-images/promo02.png" alt="">
+                                    <h3>WE ARE</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus sint expedita impedit quis porro?</p>
+                                </img>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="images/s-images/promo03.png" alt="">
+                                    <h3>WORK</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, veritatis. Odit itaque sapiente quia!</p>
+                                </img>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="images/s-images/promo04.png" alt="">
+                                    <h3>BOLG</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim tempore deserunt molestiae ullam sint!</p>
+                                </img>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- 5. 구분선 영역의 구조 작업 -->
+            <hr class="divider">
+            <section class="work-section-cfixed">
+                <h2 class="sec-tit"></h2>
+                <ul class="work-list">
+                    <li>
+                        <a href="">
+                            <div class="info">
+                                <h3>Running</h3>
+                                <span></span><img src="images/p-images/work01.jpg" alt=""></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="info">
+                                <h3>Rugby</h3>
+                                <span></span><img src="images/p-images/work02.jpg" alt=""></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="info">
+                                <h3>Weight</h3>
+                                <span></span><img src="images/p-images/work03.jpg" alt=""></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="info">
+                                <h3>Marathon</h3>
+                                <span></span><img src="images/p-images/work04.jpg" alt=""></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="info">
+                                <h3>Boxing</h3>
+                                <span></span><img src="images/p-images/work05.jpg" alt=""></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="info">
+                                <h3>Ice Hockey</h3>
+                                <span></span><img src="images/p-images/work06.jpg" alt=""></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="info">
+                                <h3>Skate Board</h3>
+                                <span></span><img src="images/p-images/work07.jpg" alt=""></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="info">
+                                <h3>Basketball</h3>
+                                <span></span><img src="images/p-images/work08.jpg" alt=""></div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- 구분선 영역 -->
+            <hr class="m-divider">
+            <section class="blog-section">
+                <div class="container">
+                    <h2 class="sec-tit">BOLG</h2>
+                    <ul class="blog-list">
+                        <li><a href=""></a>
+                            <img src="images/p-images/blog01.jpg" alt="">
+                                <time datetime="2021-10-30">OCT 30, 2021</time>
+                                <a href="">
+                                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam.</h3>
+                                </a>
+                            </img>
+                        </li>
+                        <li><a href=""></a>
+                            <img src="images/p-images/blog02.jpg" alt="">
+                                <time datetime="2021-10-30">OCT 30, 2021</time>
+                                <a href="">
+                                    <h3>Quidem, facilis consequatur sit repudiandae aliquam nam modi magni?</h3>
+                                </a>
+                            </img>
+                        </li>
+                        <li><a href=""></a>
+                            <img src="images/p-images/blog03.jpg" alt="">
+                                <time datetime="2021-10-30">OCT 30, 2021</time>
+                                <a href="">
+                                    <h3>Necessitatibus mollitia earum libero animi! Blanditiis aspernatur ex reprehenderit?</h3>
+                                </a>
+                            </img>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- 8. 연락처 영역 -->
+            <section class="contact-section">
+                <div class="container">
+                    <!-- 제목 영역 -->
+                    <h2 class="sec-tit">CONTACT</h2>
+                    <!-- 폼 영역 -->
+                    <div class="form-box">
+                        <!-- 입력 폼 구성 -->
+                        <form action="" method="">
+                            <!-- 입력 폼 그룹 태그 및 클래스 -->
+                            <fieldset class="cfixed">
+                                <!-- 입력 폼 그룹 영역 제목 구성 -->
+                                <legend class="blind">CONTACT US</legend>
+                                <!-- 이름, 전화번호, 이메일 주소 영역 폼 -->
+                                <div class="form"><label for="name" class="blind">name</label><input type="text" id="name" placeholder="Name"><label for="phone" class="blind">phone</label><input type="tel" id="phone" placeholder="Phone"><label for="email" class="blind">email</label><input type="email" id="email" placeholder="Email Address">
+                                </div>
+                                <!-- 메세지 문단 입력 폼 -->
+                                <div class="textarea"><label for="message" class="blind">message</label><textarea name="message" id="message" placeholder="Message"></textarea>
+                                </div>
+                            </fieldset>
+                            <!-- 폼 전송 버튼 영역 -->
+                            <div class="send-btn"><button>SEND MASSAGE</button></div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- 9. 푸터 영역 -->
+        <footer class="footer">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12648.446688526137!2d126.97473400000001!3d37.575988!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2ece3930023%3A0xbd86fa6e88b74ed4!2z7LKt6rOE7LKc!5e0!3m2!1sko!2skr!4v1643301304306!5m2!1sko!2skr" frameboarder="0" style="border:0" allowfullscreen=""></iframe>
+            <p class="copyright">INDIGO</p></footer>
+    </div>
 </body>
 </html>
