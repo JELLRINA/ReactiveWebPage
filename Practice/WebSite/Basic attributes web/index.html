@@ -2,13 +2,17 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>WEB SITE</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/default.css">
+
 <link rel="shortcut icon" href="images/favicon/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="images/favicon/indigo-touch-icon.png">
-<link rel="stylesheet" type="text/css" href="style.css">
+
+<link rel="stylesheet" type="text/css" href="">
 <script src="js/jquery.min.js"></script>
-<title>WEB SITE</title>
+<script src="js/website.js"></script>
 <style>
 /* 모바일용 CSS */
 /* 기본 CSS */
@@ -37,7 +41,7 @@
 /* 제목 영역 스타일 설정 */
 .sec-tit {
     font-size: 42px;
-    color: #3f51b5;
+    color: #9350c9;
     font-weight: normal;
 }
 /* 프로모션 영역 밑 구분선 스타일 지정 */
@@ -53,21 +57,481 @@
     width: 20px;
     margin: 0 auto;
     margin-top: 77px;
-    background: #3f51b5;
+    background: #9350c9;
 }
+
+/* 1. 헤더 영역 (모바일) */
+.header {
+    position: relative;
+    padding: 18px 5%;
+}
+.header .logo {
+    float: left;
+}
+.header .logo a {
+    font-size: 26px;
+    color: #9350c9;
+    font-weight: normal;
+}
+.header .gnb {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #9350c9;
+}
+.header .gnb li {
+    border-bottom: 1px solid #a28bd6;
+}
+.header .gnb li a {
+    display: block;
+    padding: 14px 0 14px 5%;
+    font-size: 14px;
+    color: #fff;
+}
+/* 토글 버튼 */
+.header .menu-toggle-btn {
+    /* 오른쪽 배치 */
+    float: right;
+    /* 너빗값 및 위쪽 마진값, 커서포인트 */
+    width: 20px;
+    margin-top: 4px;
+    cursor: pointer;
+}
+.header .menu-toggle-btn span {
+    /* 너빗값 안의 너비 100% 높이 색상 설정 */
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #9350c9;
+}
+/* span 3개 중 2번째 마진 조절 해서 만들기 */
+.header .menu-toggle-btn span:nth-child(2) {
+    margin: 5px 0;
+}
+
+/* 2. 슬라이더 영역 */
+.slider img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 3. 디스플레이 영역 */
+.display-section {
+    margin-top: 59px;
+    text-align: center;
+}
+.display-section .sec-tit {
+    margin-bottom: 30px;
+}
+.display-section .desc {
+    font-family: 'PT Serif';
+    color: #616161;
+    line-height: 1.9;
+}
+
+/* 4. 프로모션 영역 */
+.promotion-section {
+    margin-top: 68px;
+}
+/* 프로모션 전체 가운데 정렬 */
+.promotion-section .promo-list li {
+    margin-top: 52px;
+    text-align: center;
+}
+.promotion-section .promo-list li:first-child {
+    margin-top: 0;
+}
+/* 아이콘 크기 높이 */
+.promotion-section .promo-list li img {
+    height: 52px;
+}
+.promotion-section .promo-list li h3 {
+    margin: 29px 0 20px 0;
+    color: #9350c9;
+    font-weight: lighter;
+}
+.promotion-section .promo-list li p {
+    font-size: 14px;
+    font-family: 'PT Serif';
+    color: #616161;
+    line-height: 1.5;
+}
+
+/* 5. 최근 작업 영역 */
+.work-section {
+    margin-top: 73px;
+}
+.work-section .sec-tit {
+    width: 90%;
+    max-width: 1132px;
+    margin: 0 auto;
+    margin-bottom: 47px;
+    text-align: center;
+}
+.work-section .work-list li {
+    width: 100%;
+}
+.work-section .work-list li a {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.work-section .work-list li a:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: #9350c9;
+    content: "";
+    opacity: 0;
+    /* 마우스 롤오버 시 변화 속성 값 */
+    transition: all .2s;
+}
+.work-section .work-list li a:hover::before {
+    opacity: .86;
+}
+/* 입력 한 문자 가리기 */
+.work-section .work-list li .info {
+    position: absolute;
+    top: 0;
+    left: 23px;
+    z-index: 20;
+    opacity: 0;
+    transition: all .3s;
+}
+/* 사진 위에 문자 올리기 */
+.work-section .work-list li a:hover .info {
+    transform: translateY(23px);
+    opacity: 1;
+}
+/* 제목 폰트 속성 생성 */
+.work-section .work-list li .info h3 {
+    margin-bottom: 8px;
+    font-size: 23px;
+    color: #fff;
+    font-weight: normal;
+}
+.work-section .work-list li .info span {
+    font-size: 11px;
+    color: #fff;
+}
+/* 이미지 크기 조절 (줄이고 늘리느냐에 따라 변동) */
+.work-section .work-list li img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 6. 최근 작업 영역 */
+.blog-section {
+    margin-top: 77px;
+}
+.blog-section .sec-tit {
+    margin-bottom: 47px;
+    text-align: center;
+}
+.blog-section .blog-list li {
+    width: 100%;
+    margin-top: 45px;
+}
+.blog-section .blog-list li:first-child {
+    margin-top: 0;
+}
+/* 이미지 조절 */
+.blog-section .blog-list li img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+/* 날짜 속성 조절 */
+.blog-section .blog-list li time {
+    display: block;
+    margin: 11px 0 10px 0;
+    font-size: 11px;
+    color: #9e9e9e;
+}
+.blog-section .blog-list li h3 {
+    color: #424242;
+    font-weight: normal;
+    line-height: 1.6;
+}
+
+/* 7. 연락처 영역 */
+.contact-section {
+    margin-top: 109px;
+}
+.contact-section .sec-tit {
+    margin-bottom: 47px;
+    text-align: center;
+}
+/* 폼 간격 조절 */
+.contact-section .form-box .form input {
+    padding-bottom: 13px;
+    margin-bottom: 38px;
+}
+/* 메시지 간격 조절 */
+.contact-section .form-box .textarea textarea {
+    height: 165px;
+}
+/* 보내기 버튼 위치 조절 */
+.contact-section .form-box .send-btn {
+    margin-top: 36px;
+    text-align: right;
+}
+/* 보내기 버튼 디자인 */
+.contact-section .form-box .send-btn button {
+    padding: 15px;
+    margin: 0;
+    /* 테두리 지우기 */
+    border: 0;
+    /* 사이즈 및 색상 */
+    font-size: 12px;
+    color: #fff;
+    background: #9350c9;
+    font-family: 'Montserrat';
+    cursor: pointer;
+}
+
+/* 8. 푸터 영역 */
+.footer {
+    margin-top: 104px;
+}
+.footer iframe {
+    width: 100%;
+    height: 320px;
+}
+.footer p {
+    margin: 21px 0;
+    color: #9350c9;
+    text-align: center;
+}
+
+
 /* 태블릿용 CSS */
 @media all and (min-width:768px) {
-
     
+/* 기본 CSS */
+.divider{
+margin-top:124px;
+}    
+    
+.m-divider{
+margin-top:124px;
+}
+
+/* 1. 헤더 영역 (태블릿) */
+.header {
+    /* 기본값 */
+    position: static;
+    padding: 28px 52px;
+}
+.header .gnb {
+    /* 강제 적용 */
+    display: block !important;
+    position: static;
+    float: right;
+    width: auto;
+    margin-top: 6px;
+    background: none;
+}
+.header .gnb li {
+    float: left;
+    margin-left: 21px;
+    border-bottom: 0;
+}
+.header .gnb li a {
+    color: #9350c9;
+    padding: 0;
+    border-bottom: 0;
+}
+.header .menu-toggle-btn {
+    display: none !important;
+}
+
+/* 3. 슬라이더 영역 */
+.display-section {
+    margin-top: 95px;
+}
+
+/* 4. 프로모션 영역 */
+.promotion-section {
+    margin-top: 110px;
+}
+/* 왼쪽으로 배치 너비 조절 */
+.promotion-section .promo-list li{
+    float: left;
+    width: 23.046875%;
+    /* 177px ÷ 768px */
+    margin-left: 2.604166666667%;
+    /* 20px ÷ 768px */
+    margin-top: 0;
+}
+/* 첫 번째 목록 왼쪽 마진 값 초기화 */
+.promotion-section .promo-list li:first-child {
+    margin-left: 0;
+}
+
+/* 5. 최근 작업 영역 */
+.work-section {
+    margin-top: 118px;
+}
+.work-section .sec-tit {
+    margin-bottom: 76px;
+}
+/* 사진 왼쪽 정렬 2개로 나뉨 */
+.work-section .work-list li {
+    float: left;
+    width: 50%;
+}
+/* 롤오버 시 변형 속성 세로 위치 */
+.work-section .work-list li .info {
+    transform: translateY(37px);
+}
+
+/* 6. 최근 작업 영역 */
+.blog-section {
+    margin-top: 124px;
+}
+.blog-section .sec-tit {
+    margin-bottom: 76px;
+}
+.blog-section .blog-list li {
+    float: left;
+    width: 31.597222265625%;
+    /* 242.66666667px ÷ 768px */
+    margin-left: 2.60416666666667%;
+    /* 20px ÷ 768px */
+    margin-top: 0;
+}
+/* 첫 번재 목록 마진값 지우기 */
+.blog-section .blog-list li:first-child {
+    margin-left: 0;
+}
+
+/* 7. 연락처 영역 */
+.contact-section {
+    margin-top: 176px;
+}
+.contact-section .sec-tit {
+    margin-bottom: 76px;
+}
+.contact-section .form-box .form, .contact-section .form-box .textarea {
+    float: left;
+    width: 48.69791666667%;
+    /* 374px 768px */
+}
+/* 오른쪽 마진 값 띄우기 */
+.contact-section .form-box .form {
+    margin-right: 2.369668246445498%;
+}
+.contact-section .form-box .form input:last-child {
+    margin-bottom: 0;
+}
+
+/* 8. 푸터 영역 */
+.footer iframe {
+    height: 432px;
+}
+.footer p {
+    margin: 34px 0;
+}
 }
 /* PC용 CSS */
 @media all and (min-width:1132px) {
-    .divider {
-        margin-top: 124px;
-    }
-    .m-divider {
-        margin-top: 124px;
-    }
+
+/* 3. 디스플레이 영역 */
+.display-section {
+    text-align: left;
+}
+.display-section .sec-tit {
+    float: left;
+    margin-bottom: 0;
+}
+.display-section .desc {
+    position: relative;
+    float: right;
+    padding-left: 20px;
+    font-family: 'PT Serif';
+    color: #616161;
+    line-height: 1.9;
+}
+.display-section .desc::before {
+    display: block;
+    /* 절대적인 위치 */
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 2px;
+    height: 44px;
+    background: #e0e0e0;
+    content: "";
+}
+
+/* 4. 프로모션 영역 */
+.promotion-section .promo-list li {
+    width: 23.67491166077739%;
+    /* 268px ÷ 1132px */
+    margin-left: 1.76678445229682%;
+    /* 20px ÷ 1132px */
+}
+
+/* 5. 최근 작업 영역 */
+/* 제목 왼쪽 정렬 */
+.work-section .sec-tit {
+    text-align: left;
+}
+/* 4개로 나뉨 */
+.work-section .work-list li {
+    width: 25%;
+}
+
+/* 6. 최근 작업 영역 */
+.blog-section .sec-tit {
+    float: left;
+    margin-bottom: 0;
+}
+.blog-section .blog-list {
+    float: right;
+    width: 74.5583038869258%;
+    /* 844px ÷ 1132px */
+}
+.blog-section .blog-list li {
+    /* 가변 그리드 공식 너빗값 및 왼족 마진값 재설정 */
+    width: 31.75355450236967%;
+    /* 268px 844px */
+    margin-left: 2.369668246445498%;
+    /* 20px 844px */
+}
+
+/* 7. 연락처 영역 */
+.contact-section .sec-tit {
+    float: left;
+    margin-bottom: 0;
+}
+/* 폼 오른쪽 너비값 조절 */
+.contact-section .form-box {
+    float: right;
+    width: 74.5583038869258%;
+}
+.contact-section .form-box .form, .contact-section .form-box .textarea {
+    width: 48.81516587677725%;
+    /* 412px / 844px */
+}
+.contact-section .form-box .form {
+    margin-right: 2.369668246445498%;
+    /* 20px / 844px */
+}
+
 }
 
 </style>
@@ -77,7 +541,7 @@
         <!-- 1. 헤더 영역 -->
         <header class="header cfixed">
             <!-- 링크 영역 포함된 로고 영역 제목 -->
-            <h1 class="logo"><a href="">INDIGO</a></h1>
+            <h1 class="logo"><a href="">JELLRINA</a></h1>
             <!-- 메뉴 영역 내비 (목록 구성) -->
             <nav>
                 <ul class="gnb">
@@ -104,7 +568,7 @@
             <section class="display-section">
                 <div class="container">
                     <h2 class="sec-tit">WE ARE</h2>
-                    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Culpa magnam, dolorem provident earum in nemo, ea pariatur saepe recusandae nostrum omnis ducimus velit ad odio dolorum fugiat voluptatum at voluptas?</p>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos, quas? <br> Quis odio voluptatibus iusto minus laboriosam blanditiis ullam cumque deleniti.</p>
                 </div>
             </section>
             <!-- 4. 프로모션 영역 -->
@@ -148,63 +612,78 @@
             </section>
             <!-- 5. 구분선 영역의 구조 작업 -->
             <hr class="divider">
-            <section class="work-section-cfixed">
-                <h2 class="sec-tit"></h2>
+            <section class="work-section cfixed">
+                <h2 class="sec-tit">WORK</h2>
                 <ul class="work-list">
                     <li>
                         <a href="">
                             <div class="info">
                                 <h3>Running</h3>
-                                <span></span><img src="images/p-images/work01.jpg" alt=""></div>
+                                <span>WEB/PRINT</span>
+                            </div>
+                            <img src="images/p-images/work01.jpg" alt="">
                         </a>
                     </li>
                     <li>
                         <a href="">
                             <div class="info">
                                 <h3>Rugby</h3>
-                                <span></span><img src="images/p-images/work02.jpg" alt=""></div>
+                                <span>WEB/PRINT</span>
+                            </div>
+                            <img src="images/p-images/work02.jpg" alt="">
                         </a>
                     </li>
                     <li>
                         <a href="">
                             <div class="info">
                                 <h3>Weight</h3>
-                                <span></span><img src="images/p-images/work03.jpg" alt=""></div>
-                        </a>
+                                <span>WEB/PRINT</span>
+                            </div>
+                            <img src="images/p-images/work03.jpg" alt="">
                     </li>
                     <li>
                         <a href="">
                             <div class="info">
                                 <h3>Marathon</h3>
-                                <span></span><img src="images/p-images/work04.jpg" alt=""></div>
+                                <span>WEB/PRINT</span>
+                            </div>
+                            <img src="images/p-images/work04.jpg" alt="">
                         </a>
                     </li>
                     <li>
                         <a href="">
                             <div class="info">
                                 <h3>Boxing</h3>
-                                <span></span><img src="images/p-images/work05.jpg" alt=""></div>
+                                <span>WEB/PRINT</span>
+                            </div>
+                            <img src="images/p-images/work05.jpg" alt="">
                         </a>
                     </li>
                     <li>
                         <a href="">
                             <div class="info">
                                 <h3>Ice Hockey</h3>
-                                <span></span><img src="images/p-images/work06.jpg" alt=""></div>
+                                <span></span>
+                            </div>
+                            <img src="images/p-images/work06.jpg" alt="">
                         </a>
                     </li>
                     <li>
                         <a href="">
                             <div class="info">
                                 <h3>Skate Board</h3>
-                                <span></span><img src="images/p-images/work07.jpg" alt=""></div>
+                                <span>WEB/PRINT</span>
+                            </div>
+                            <img src="images/p-images/work07.jpg" alt="">
                         </a>
                     </li>
                     <li>
                         <a href="">
                             <div class="info">
                                 <h3>Basketball</h3>
-                                <span></span><img src="images/p-images/work08.jpg" alt=""></div>
+                                <span>WEB/PRINT</span>
+                            </div>
+                            <img src="images/p-images/work08.jpg" alt="">
                         </a>
                     </li>
                 </ul>
@@ -215,24 +694,25 @@
                 <div class="container">
                     <h2 class="sec-tit">BOLG</h2>
                     <ul class="blog-list">
-                        <li><a href=""></a>
-                            <img src="images/p-images/blog01.jpg" alt="">
+                        <li>
+                            <a href="">
+                            <img src="images/p-images/blog01.jpg" alt=""></a>
                                 <time datetime="2021-10-30">OCT 30, 2021</time>
                                 <a href="">
                                     <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam.</h3>
                                 </a>
                             </img>
                         </li>
-                        <li><a href=""></a>
-                            <img src="images/p-images/blog02.jpg" alt="">
+                        <li><a href="">
+                            <img src="images/p-images/blog02.jpg" alt=""></a>
                                 <time datetime="2021-10-30">OCT 30, 2021</time>
                                 <a href="">
                                     <h3>Quidem, facilis consequatur sit repudiandae aliquam nam modi magni?</h3>
                                 </a>
                             </img>
                         </li>
-                        <li><a href=""></a>
-                            <img src="images/p-images/blog03.jpg" alt="">
+                        <li><a href="">
+                            <img src="images/p-images/blog03.jpg" alt=""></a>
                                 <time datetime="2021-10-30">OCT 30, 2021</time>
                                 <a href="">
                                     <h3>Necessitatibus mollitia earum libero animi! Blanditiis aspernatur ex reprehenderit?</h3>
@@ -272,7 +752,7 @@
         <!-- 9. 푸터 영역 -->
         <footer class="footer">
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12648.446688526137!2d126.97473400000001!3d37.575988!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2ece3930023%3A0xbd86fa6e88b74ed4!2z7LKt6rOE7LKc!5e0!3m2!1sko!2skr!4v1643301304306!5m2!1sko!2skr" frameboarder="0" style="border:0" allowfullscreen=""></iframe>
-            <p class="copyright">INDIGO</p></footer>
+            <p class="copyright">JELLRINA</p></footer>
     </div>
 </body>
 </html>
