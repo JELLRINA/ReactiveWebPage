@@ -14,3 +14,9 @@ http://swining.dothome.co.kr/index2.html
 http://swining.dothome.co.kr/index3.html
 <br>
 <br>
+
+### BASIC ATTRIBUTES WEB
+-----------------------
+http://swining.dothome.co.kr/index.html
+<br>
+<br>
